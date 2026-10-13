@@ -1,0 +1,375 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #242428;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  /* display: flex;
+  justify-content: center; */
+  background-color: #303035;
+  /* #E8E8EB;
+   */
+  padding: 20px 0;
+}
+
+/* H E A D E R */
+
+.container {
+  max-width: 1180px;
+  /* display: flex; */
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-logo {
+  width: 50px;
+  height: auto;
+  margin-right: 40px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #bbbaba;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+
+.nav-list {
+  display: flex;
+}
+
+.nav-list li:not(:last-child) {
+  margin-right: 24px;
+}
+
+.languages-list {
+  display: flex;
+  gap: 15px;
+  margin-left: 40px;
+}
+
+/* 
+Maybe to HIGHLIGHT the Flags later on
+.languages-list li {
+  background-color: #fdcb07;
+  padding: 0 8px;
+  border-radius: 20px;
+} */
+
+/* H E R O */
+
+.hero-section {
+  /* display: flex;
+  justify-content: center; */
+  /* background-color: #242428; */
+  /* #ebebed; Gray*/
+  padding: 100px 20px;
+  padding-bottom: 60px;
+}
+
+.header-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .hero-section > div  */
+.hero-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+
+.hero-description-thumb,
+.hero-image-thumb {
+  flex-grow: 1;
+  flex-basis: 50%;
+}
+
+.hero-image-thumb {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.hero-description-thumb h1 {
+  font-family: "Cardo", serif;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 1.15;
+  margin-bottom: 35px;
+  color: white;
+}
+
+.hero-description-thumb p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 0.8;
+  margin-bottom: 170px;
+  color: white;
+}
+
+.highlighed-text {
+  color: #fdcb07;
+}
+
+.hero-btn {
+  padding: 13px 10px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  border-radius: 8px;
+  outline: none;
+  border: none;
+  width: 130px;
+}
+
+.hero-btn:not(:last-child) {
+  margin-right: 12px;
+}
+
+.hero-btn:nth-child(4) {
+  background-color: #fdcb07;
+}
+
+.hero-btn:nth-child(3),
+.hero-btn:last-child {
+  background-color: #2983a8;
+  color: antiquewhite;
+}
+
+.hero-image-thumb img {
+  border: 8px solid #fdcb07;
+  border-radius: 8px;
+}
+
+.hero-image-thumb p {
+  position: absolute;
+  display: inline-flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.1;
+  border-radius: 18px;
+  height: 80px;
+}
+
+.hero-badge-bottom {
+  left: 60px;
+  bottom: -40px;
+  /* ABSOLUTE POSITIONING */
+  background-color: #10469d;
+  color: white;
+  width: 140px;
+}
+
+.hero-badge-top {
+  right: 60px;
+  top: -40px;
+  /* ABSOLUTE POSITIONING */
+  background-color: lightgrey;
+  color: black;
+  width: 140px;
+}
+
+.hero-badge-bottom span {
+  font-weight: 900;
+  font-size: 24px;
+}
+
+.hero-badge-top span {
+  font-weight: 900;
+  font-size: 28px;
+}
+
+.arrow-down-icon {
+  width: 30px;
+  display: block;
+  margin: 0 auto;
+  animation-name: floating;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+
+@keyframes floating {
+  0%,
+  100% {
+    transform: translateY(-25%);
+  }
+
+  50% {
+    transform: translateY(0%);
+  }
+}
+
+/* A C T I V I T I E S */
+
+.activities-section {
+  padding: 40px 0;
+  padding-top: 80px;
+  color: white;
+  display: block;
+  width: 100%;
+  position: relative;
+  /* This is for the other element(s) to be positioned */
+}
+
+.activities-section::before {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 700px;
+
+  background: #2a7b9b;
+  background: linear-gradient(
+    90deg,
+    rgba(42, 123, 155, 1) 0%,
+    rgba(87, 199, 133, 1) 50%,
+    rgba(237, 221, 83, 1) 100%
+  );
+  /* 
+  This is from the New York dance school sample
+  background: linear-gradient(
+    90deg,
+    rgba(253, 203, 7, 0) 0,
+    #fdcb07 45.18%,
+    rgba(253, 203, 7, 0) 90%
+  ); */
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.activities-heading {
+  /* margin: 0 auto; */
+  text-align: center;
+  font-family: "Cardo", serif;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+
+.activities-text {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+/* This is the List of Cards */
+.activities-list {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* This is the Card itself */
+.activities-item {
+  /* width: 224px; */
+  flex-basis: calc((80% - 2 * 30px) / 3);
+  display: flex;
+  flex-direction: column;
+
+  background-color: rgb(13, 96, 69);
+  border-radius: 20px;
+  padding-bottom: 30px;
+  padding-top: 20px;
+  /* padding: 0 20px 40px 20px; */
+  border: 2px double #fdcb07;
+}
+
+.activities-item > img {
+  /* width: 70%; */
+  height: 270px;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.activities-item h4 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+.activities-item > p {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  /* flex-direction: column; */
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.2;
+  margin-bottom: 10px;
+  padding: 0 20px;
+}
+
+.activities-item-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  padding: 0 20px;
+}
+
+.activities-item-wrapper > p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.2;
+  background-color: #fdcb07;
+  color: black;
+  padding: 3px 6px;
+  border-radius: 6px;
+}
+
+.activities-details-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.2;
+  padding: 0 20px;
+}
+
+.activities-details-item:first-child {
+  margin-bottom: 10px;
+}
